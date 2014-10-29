@@ -1,7 +1,11 @@
 from django.db import models
 
 # Create your models here.
-Class Sample(models>model):
+class Sample(models>model):
 
     user = models.CharField()
-       password = models.CharField()
+    password = models.CharField()
+
+    def __unicode__(self):
+
+        return self.user
