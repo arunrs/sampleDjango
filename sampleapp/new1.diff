@@ -1,0 +1,12 @@
+diff --git a/sampleapp/manage.py b/sampleapp/manage.py
+index 02484797c3b168882a7437eeb771ac8ad9749ee0..205318f4b0f92f8a6681f3b74824eb09ae1a71f7 100755
+--- a/sampleapp/manage.py
++++ b/sampleapp/manage.py
+@@ -2,6 +2,7 @@
+ import os
+ import sys
+ from collections import defaultdict
++import csv
+ 
+ if __name__ == "__main__":
+     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "sampleapp.settings")

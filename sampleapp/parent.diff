@@ -1,0 +1,82 @@
+commit 0dd249c1ea13b76fa8db0cde42cceb0c4d42c28e
+Author: omtripathi88 <om.tripathi@clariontechnologies.co.in>
+Date:   Thu Oct 30 13:09:40 2014 +0530
+
+    added the new code to manage.py
+
+diff --git a/sampleapp/manage.py b/sampleapp/manage.py
+index 5782900affe4dc4468a4504f6c35dff2f31a9864..02484797c3b168882a7437eeb771ac8ad9749ee0 100755
+--- a/sampleapp/manage.py
++++ b/sampleapp/manage.py
+@@ -1,6 +1,7 @@
+ #!/usr/bin/env python
+ import os
+ import sys
++from collections import defaultdict
+ 
+ if __name__ == "__main__":
+     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "sampleapp.settings")
+diff --git a/sampleapp/new.diff b/sampleapp/new.diff
+new file mode 100644
+index 0000000000000000000000000000000000000000..aa51742d57740b2ebc68e4cbaec4281bdd0716a0
+--- /dev/null
++++ b/sampleapp/new.diff
+@@ -0,0 +1,28 @@
++diff --git a/sampleapp/new1/models.py b/sampleapp/new1/models.py
++index 4f46e8a..0dc6695 100644
++--- a/sampleapp/new1/models.py
+++++ b/sampleapp/new1/models.py
++@@ -5,3 +5,7 @@ Class Sample(models>model):
++ 
++     user = models.CharField()
++        password = models.CharField()
+++
+++    def __unicode__(self):
+++
+++        return self.user
++diff --git a/sampleapp/sampleapp/settings.py b/sampleapp/sampleapp/settings.py
++index f198cc4..19f1272 100644
++--- a/sampleapp/sampleapp/settings.py
+++++ b/sampleapp/sampleapp/settings.py
++@@ -20,9 +20,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
++ SECRET_KEY = '7a6f+8+3yt60ssek0&1ts_*+mnb&&tvr-&o6-_p9@!%ar98n^*'
++ 
++ # SECURITY WARNING: don't run with debug turned on in production!
++-DEBUG = True
+++DEBUG = False
++ 
++-TEMPLATE_DEBUG = True
+++TEMPLATE_DEBUG = False
++ 
++ ALLOWED_HOSTS = []
++ 
+diff --git a/sampleapp/sampleapp/__init__.pyc b/sampleapp/sampleapp/__init__.pyc
+new file mode 100644
+index 0000000000000000000000000000000000000000..758ed8ec49456bf9b66a0d11bdccfca5a2f1c09d
+Binary files /dev/null and b/sampleapp/sampleapp/__init__.pyc differ
+diff --git a/sampleapp/sampleapp/sample_diff.diff b/sampleapp/sampleapp/sample_diff.diff
+new file mode 100644
+index 0000000000000000000000000000000000000000..8ed56f3a7e4e6dd8bba025b70a80b40c74387389
+--- /dev/null
++++ b/sampleapp/sampleapp/sample_diff.diff
+@@ -0,0 +1,16 @@
++diff --git a/sampleapp/sampleapp/settings.py b/sampleapp/sampleapp/settings.py
++index f198cc4..19f1272 100644
++--- a/sampleapp/sampleapp/settings.py
+++++ b/sampleapp/sampleapp/settings.py
++@@ -20,9 +20,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
++ SECRET_KEY = '7a6f+8+3yt60ssek0&1ts_*+mnb&&tvr-&o6-_p9@!%ar98n^*'
++ 
++ # SECURITY WARNING: don't run with debug turned on in production!
++-DEBUG = True
+++DEBUG = False
++ 
++-TEMPLATE_DEBUG = True
+++TEMPLATE_DEBUG = False
++ 
++ ALLOWED_HOSTS = []
++ 
+diff --git a/sampleapp/sampleapp/settings.pyc b/sampleapp/sampleapp/settings.pyc
+new file mode 100644
+index 0000000000000000000000000000000000000000..55fbb1ee49159123611724da4e516aaea30d34c2
+Binary files /dev/null and b/sampleapp/sampleapp/settings.pyc differ
