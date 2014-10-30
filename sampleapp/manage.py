@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import os
 import sys
+from collections import defaultdict
 
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "sampleapp.settings")

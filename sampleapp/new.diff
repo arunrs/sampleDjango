@@ -1,0 +1,28 @@
+diff --git a/sampleapp/new1/models.py b/sampleapp/new1/models.py
+index 4f46e8a..0dc6695 100644
+--- a/sampleapp/new1/models.py
++++ b/sampleapp/new1/models.py
+@@ -5,3 +5,7 @@ Class Sample(models>model):
+ 
+     user = models.CharField()
+        password = models.CharField()
++
++    def __unicode__(self):
++
++        return self.user
+diff --git a/sampleapp/sampleapp/settings.py b/sampleapp/sampleapp/settings.py
+index f198cc4..19f1272 100644
+--- a/sampleapp/sampleapp/settings.py
++++ b/sampleapp/sampleapp/settings.py
+@@ -20,9 +20,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+ SECRET_KEY = '7a6f+8+3yt60ssek0&1ts_*+mnb&&tvr-&o6-_p9@!%ar98n^*'
+ 
+ # SECURITY WARNING: don't run with debug turned on in production!
+-DEBUG = True
++DEBUG = False
+ 
+-TEMPLATE_DEBUG = True
++TEMPLATE_DEBUG = False
+ 
+ ALLOWED_HOSTS = []
+ 
